@@ -50,3 +50,18 @@ $(document).ready(function () {
 
                 } //for loop
             }); // done response
+
+        function playGif() {
+            var state = $(this).attr('data-state');
+            console.log(state);
+            if (state == 'still') {
+                $(this).attr('src', $(this).data('animate'));
+                $(this).attr('data-state', 'animate');
+            } else {
+                $(this).attr('src', $(this).data('still'));
+                $(this).attr('data-state', 'still');
+            }
+
+        } //on click express
+
+    }) // document on click

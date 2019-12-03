@@ -65,3 +65,23 @@ $(document).ready(function () {
         } //on click express
 
     }) // document on click
+
+    //adding new button
+    $(document).on('click', '#addExpress', function () {
+        if ($('#express-input').val().trim() == '') {
+            alert('please add car');
+        }
+        else {
+            var car = $('#express-input').val().trim();
+            topics.push(car);
+            $('#express-input').val('');
+            buttonExpress();
+            return false;
+
+        }
+
+    });
+
+
+
+});  //document ready
